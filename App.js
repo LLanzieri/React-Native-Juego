@@ -34,9 +34,20 @@ const App = () => {
   return (
     <SafeAreaView style={styles.mainContainer}>
 
-      {pantalla === 0 ? <Home cambiarPantallaSesionJuego={cambiarPantallaSesionJuego} /> : null}
-      {pantalla === 1 ? <SesionJuego cambiarPantallaHome={cambiarPantallaHome} cambiarPantallaResultados={cambiarPantallaResultados} sumarPunto={sumarPunto} /> : null}
-      {pantalla === 2 ? <Resultados puntos={puntos} cambiarPantallaHome={cambiarPantallaHome} cambiarPantallaSesionJuego={cambiarPantallaSesionJuego} /> : null}
+      {
+        pantalla === 0 &&
+        <Home cambiarPantallaSesionJuego={cambiarPantallaSesionJuego} />
+      }
+
+      {
+        pantalla === 1 &&
+        <SesionJuego cambiarPantallaHome={cambiarPantallaHome} cambiarPantallaResultados={cambiarPantallaResultados} sumarPunto={sumarPunto} />
+      }
+
+      {
+        pantalla === 2 &&
+        <Resultados puntos={puntos} cambiarPantallaHome={cambiarPantallaHome} cambiarPantallaSesionJuego={cambiarPantallaSesionJuego} />
+      }
 
     </SafeAreaView>
   );
